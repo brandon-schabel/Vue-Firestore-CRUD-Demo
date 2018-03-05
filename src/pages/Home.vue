@@ -1,7 +1,7 @@
 <template>
-  <v-layou>
+  <v-layout>
     <app-crud></app-crud>
-  </v-layou>
+  </v-layout>
 </template>
 
 <script>
