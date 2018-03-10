@@ -2,12 +2,7 @@
   <v-container>
     <v-layout row>
       <v-flex xs8>
-        <v-text-field
-          name="input-7-1"
-          label="Note"
-          multi-line
-          v-model="noteTextField"
-        ></v-text-field>
+        <v-text-field name="note" label="Note" multi-line v-model="noteTextField"></v-text-field>
       </v-flex>
     </v-layout>
     <v-layout row>
@@ -27,7 +22,7 @@
 </template>
 
 <script>
-  import {db, notesRef } from '../main.js'
+  import { notesRef } from '../main.js'
 
   export default {
     created: function () {
@@ -49,6 +44,7 @@
         }).catch(function (error) {
           console.error('Error adding document: ', error)
         })
+        this.noteTextField = null; // clear text field content;
         this.getNotes()
       },
       getNotes() {

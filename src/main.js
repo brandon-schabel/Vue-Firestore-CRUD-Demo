@@ -2,10 +2,8 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
-import VueFirestore from 'vue-firestore'
 import Firebase from 'firebase'
 import config from './config'
 
@@ -20,20 +18,16 @@ Vue.use(Vuetify, {theme: {
     success: '#4CAF50',
     warning: '#FFC107'
 }})
-Vue.use(VueFirestore)
 
 Vue.config.productionTip = false
 
-var firebaseApp = Firebase.initializeApp(config)
+let firebaseApp = Firebase.initializeApp(config)
 export const db = firebaseApp.firestore()
 export const notesRef = db.collection('notes')
-console.log(db)
-
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
   components: { App },
   template: '<App/>'
 })

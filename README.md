@@ -1,6 +1,6 @@
-# new_crud_firestore
+# Vue CRUD Firestore Demo
 
-> A Vue.js project
+> A simple CRUD demostration using firestore and vue
 
 ## Build Setup
 
