@@ -5,16 +5,15 @@
 </template>
 
 <script>
-import Crud from '@/components/Crud'
+  import Crud from '../components/Crud'
 
-export default {
-  name: 'Home',
-  components: {
-    appCrud: Crud
-  },
-  data () {
-    return {
+  export default {
+    name: 'Home',
+    components: {
+      appCrud: Crud
+    },
+    data() {
+      return {}
     }
   }
-}
 </script>

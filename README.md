@@ -1,4 +1,4 @@
-# crud_firestore
+# new_crud_firestore
 
 > A Vue.js project
 
