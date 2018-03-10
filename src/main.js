@@ -26,6 +26,7 @@ Vue.config.productionTip = false
 
 var firebaseApp = Firebase.initializeApp(config)
 export const db = firebaseApp.firestore()
+export const notesRef = db.collection('notes')
 console.log(db)
 
 
