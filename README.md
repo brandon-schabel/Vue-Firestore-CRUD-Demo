@@ -1,6 +1,8 @@
 # Vue CRUD Firestore Demo
 
 > A simple CRUD demostration using firestore and vue
+I tried to make this as simple as possible so instead of following the convention of splitting the Crud component into
+mutliple files, I decided to just keep all the functionality in one file.
 
 ## Build Setup
 

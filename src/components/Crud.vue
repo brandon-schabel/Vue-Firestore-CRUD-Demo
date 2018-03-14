@@ -77,11 +77,12 @@
       fillNoteContent(key) {
         // store key that we want to update if used submits the update
         this.updateKey = key;
-        for(let note in this.notes) {
-          if(key === this.notes[note].key) {
+        for (let note in this.notes) {
+          if (key === this.notes[note].key) {
             this.noteTextField = this.notes[note].content
           }
         }
+      },
 
         /* above we used the existing data we already pulled from firestore to get our update note content,
         // alternatively demonstrated below we can query firestore for the content of the given update key
@@ -102,7 +103,6 @@
           console.log("Error: ", error)
         })
         */
-      },
 
       updateNote(key) {
         let docRef = notesRef.doc(key)
